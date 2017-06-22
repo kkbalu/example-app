@@ -5,6 +5,9 @@ import { routerReducer } from '@angular-redux/router';
 import { createAnimalAPIReducer } from '../animals/api/reducer';
 import { ANIMAL_TYPES } from '../animals/model';
 
+import myObjectsReducer from './my-objects';
+
+
 // Define the global store shape by combining our application's
 // reducers together into a given structure.
 export const rootReducer = composeReducers(
@@ -12,5 +15,6 @@ export const rootReducer = composeReducers(
   combineReducers({
     elephant: createAnimalAPIReducer(ANIMAL_TYPES.ELEPHANT),
     lion: createAnimalAPIReducer(ANIMAL_TYPES.LION),
+    myObjects: myObjectsReducer,
     router: routerReducer,
   }));

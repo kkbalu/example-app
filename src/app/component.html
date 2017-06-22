@@ -7,6 +7,9 @@
   <a routerLink="/feedback" routerLinkActive="active">Feedback</a>
 </nav>
 
+<p><b>myUndefined:</b> {{myUndefined$ | async}}</p>
+<p><b>myObjects.country:</b> {{country$ | async}}</p>
+
 <content>
   <router-outlet></router-outlet>
 </content>
